@@ -1,0 +1,282 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_jVaWmY": {
+      "type": "hero",
+      "blocks": {
+        "text_YLPk4p": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<p>Fresh Flowers for Every Moment</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h3",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground-heading)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "button_H9gpTf": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "Shop all",
+            "link": "shopify://collections/all",
+            "open_in_new_tab": false,
+            "style_class": "button-secondary",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_YLPk4p",
+        "button_H9gpTf"
+      ],
+      "name": "t:names.hero",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/ChatGPT_Image_Mar_8_2026_10_00_23_AM.png",
+        "media_type_2": "image",
+        "stack_media_on_mobile": false,
+        "custom_mobile_media": false,
+        "media_type_1_mobile": "image",
+        "media_type_2_mobile": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "space-between",
+        "vertical_alignment": "flex-end",
+        "align_baseline": true,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "flex-end",
+        "gap": 24,
+        "section_width": "page-width",
+        "section_height": "large",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-6",
+        "toggle_overlay": true,
+        "overlay_color": "#12121266",
+        "overlay_style": "solid",
+        "gradient_direction": "to bottom",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 100,
+        "padding-block-end": 72
+      }
+    },
+    "177282359903fb2d60": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_6e81407_XiGAc9": {
+          "type": "ai_gen_block_6e81407",
+          "settings": {
+            "collections": [
+              "frontpage",
+              "test",
+              "restt",
+              "sasa",
+              "zxzxz",
+              "zxzxzx"
+            ],
+            "desktop_width_percent": 100,
+            "circle_size": 120,
+            "border_width": 1,
+            "border_color": "#ffc0cb",
+            "item_width": 100,
+            "item_spacing": 30,
+            "title_size": 12,
+            "title_color": "#000000",
+            "title_spacing": 15
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_6e81407_XiGAc9"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "1772870366c9abc4fe": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_c35105a_x9pgmb": {
+          "type": "ai_gen_block_c35105a",
+          "settings": {
+            "collection": "frontpage",
+            "products_per_page": 4,
+            "products_per_row": 4,
+            "desktop_width_percent": 100,
+            "show_header": true,
+            "heading": "<p>All Products </p>",
+            "description": "<p>Browse our curated selection of products</p>",
+            "heading_alignment": "center",
+            "heading_size": 24,
+            "text_size": 16,
+            "header_spacing": 50,
+            "image_aspect_ratio": 140,
+            "image_fit": "cover",
+            "show_sale_badge": true,
+            "badge_text": "Sale",
+            "badge_font_size": 10,
+            "badge_font_weight": "600",
+            "badge_text_transform": "uppercase",
+            "badge_padding_vertical": 4,
+            "badge_padding_horizontal": 8,
+            "badge_border_radius": 4,
+            "badge_position_top": 10,
+            "badge_position_left": 10,
+            "badge_background": "#ff0000",
+            "badge_text_color": "#ffffff",
+            "price_font_size": 13,
+            "price_font_weight": "600",
+            "compare_price_font_size": 12,
+            "compare_price_font_weight": "400",
+            "price_color": "#000000",
+            "sale_price_color": "#ff0000",
+            "compare_price_color": "#999999",
+            "button_text": "View Product",
+            "button_width": 140,
+            "button_height": 40,
+            "button_width_mobile": 100,
+            "button_height_mobile": 30,
+            "button_font_size": 14,
+            "button_font_size_mobile": 11,
+            "button_font_weight": "600",
+            "button_text_transform": "none",
+            "button_border_width": 1,
+            "button_border_radius": 40,
+            "button_background": "#221016",
+            "button_text_color": "#ffffff",
+            "button_border_color": "#ffffff",
+            "button_hover_background": "#ffffff",
+            "button_hover_text_color": "#221016",
+            "button_hover_border_color": "#221016",
+            "grid_gap": 8,
+            "section_padding_top": 40,
+            "section_padding_bottom": 40,
+            "section_padding_horizontal": 0,
+            "pagination_spacing": 20,
+            "card_border_radius": 12,
+            "card_border_width": 0,
+            "card_background": "#f5f5f5",
+            "card_border_color": "#e6e6e6",
+            "pagination_button_radius": 8,
+            "pagination_button_bg": "#f5f5f5",
+            "pagination_button_text": "#221016",
+            "pagination_button_border": "#1a1a1a",
+            "pagination_button_hover_bg": "#221016",
+            "pagination_button_hover_text": "#ffffff",
+            "pagination_active_bg": "#221016",
+            "pagination_active_text": "#ffffff",
+            "background_color": "#ffffff",
+            "heading_color": "#221016",
+            "text_color": "#666666",
+            "product_title_color": "#221016",
+            "product_title_hover_color": "#666666"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_c35105a_x9pgmb"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "custom_liquid_7w7rCk": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "<style>\n.features{\n  display:flex;\n  justify-content:center;\n  gap:30px;\n  padding:40px 20px;\n  background:white;\n  flex-wrap:wrap;\n}\n\n.feature-card{\n  background:#F5F5F5;\n  border-radius:12px;\n  padding:25px 30px;\n  text-align:center;\n  width:220px;\n  transition:0.3s;\n  box-shadow:0 5px 15px rgba(0,0,0,0.05);\n}\n\n.feature-card:hover{\n  transform:translateY(-5px);\n  box-shadow:0 10px 25px rgba(0,0,0,0.1);\n}\n\n.icon{\n  width:55px;\n  height:55px;\n  border-radius:50%;\n  display:flex;\n  align-items:center;\n  justify-content:center;\n  margin:auto;\n  font-size:22px;\n  margin-bottom:12px;\n}\n\n.delivery{\n  background:#e9f6ec;\n}\n\n.flowers{\n  background:#fdecef;\n}\n\n.payment{\n  background:#fdf4e6;\n}\n\n.feature-card h3{\n  font-size:14px;\n  margin-bottom:5px;\n  letter-spacing:1px;\n}\n\n.feature-card p{\n  font-size:12px;\n  color:#777;\n}\n</style>\n\n\n\n\n<section class=\"features\">\n  <div class=\"feature-card\">\n    <div class=\"icon delivery\">\n      🚚\n    </div>\n    <h3>Same Day Delivery</h3>\n    <p>Fast delivery across the city</p>\n  </div>\n\n  <div class=\"feature-card\">\n    <div class=\"icon flowers\">\n      🌷\n    </div>\n    <h3>Fresh Flowers</h3>\n    <p>Daily fresh premium flowers</p>\n  </div>\n\n  <div class=\"feature-card\">\n    <div class=\"icon payment\">\n      🔒\n    </div>\n    <h3>Secure Payment</h3>\n    <p>100% safe checkout</p>\n  </div>\n</section>",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    }
+  },
+  "order": [
+    "hero_jVaWmY",
+    "177282359903fb2d60",
+    "1772870366c9abc4fe",
+    "custom_liquid_7w7rCk"
+  ]
+}
