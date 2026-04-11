@@ -11,36 +11,6 @@
   "type": "header",
   "name": "Header",
   "sections": {
-    "header_announcements_9jGBFp": {
-      "type": "header-announcements",
-      "blocks": {
-        "announcement_BxgCk9": {
-          "type": "_announcement",
-          "settings": {
-            "text": "Welcome to our store",
-            "link": "",
-            "font": "var(--font-subheading--family)",
-            "font_size": "0.75rem",
-            "weight": "",
-            "letter_spacing": "normal",
-            "case": "none"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "announcement_BxgCk9"
-      ],
-      "name": "t:names.announcement_bar",
-      "settings": {
-        "speed": 5,
-        "section_width": "page-width",
-        "color_scheme": "scheme-6",
-        "divider_width": 1,
-        "padding-block-start": 15,
-        "padding-block-end": 15
-      }
-    },
     "header_section": {
       "type": "header",
       "blocks": {
@@ -114,10 +84,21 @@
         "enable_transparent_header_collection": false,
         "collection_color_scheme": "default"
       }
+    },
+    "custom_liquid_NacNFV": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n\n<link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap\" rel=\"stylesheet\">\n\n<style>\n\n*{\nbox-sizing:border-box;\n}\n\nhtml,body{\nmargin:0;\noverflow-x:hidden;\n}\n\n/* bar */\n.marquee{\nwidth:100%;\nheight:38px;\nbackground:#221016;\noverflow:hidden;\ndisplay:flex;\nalign-items:center;\n}\n\n/* moving track */\n.marquee-track{\ndisplay:flex;\nflex-shrink:0;\nwhite-space:nowrap;\nanimation:scroll 23s linear infinite;\nfont-family:\"Poppins\",sans-serif;\nfont-size:14px;\ncolor:#FFFFFF;\n}\n\n/* spacing */\n.marquee-track span{\npadding-right:12px;\n}\n\n/* animation */\n@keyframes scroll{\n0%{\ntransform:translateX(0);\n}\n100%{\ntransform:translateX(-50%);\n}\n}\n\n</style>\n</head>\n\n<body>\n\n<div class=\"marquee\">\n<div class=\"marquee-track\">\n\n<span>🌹 Luxury bouquets for your unforgettable moments •</span>\n<span>🌹 Luxury bouquets for your unforgettable moments •</span>\n<span>🌹 Luxury bouquets for your unforgettable moments •</span>\n<span>🌹 Luxury bouquets for your unforgettable moments •</span>\n\n</div>\n</div>\n\n</body>\n\n</html>",
+        "color_scheme": "scheme-58084d4c-a86e-4d0a-855e-a0966e5043f7",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
     }
   },
   "order": [
-    "header_announcements_9jGBFp",
+    "custom_liquid_NacNFV",
     "header_section"
   ]
 }

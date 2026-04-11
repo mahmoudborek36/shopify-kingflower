@@ -116,10 +116,33 @@
             "title_spacing": 15
           },
           "blocks": {}
+        },
+        "video_3CDaGW": {
+          "type": "video",
+          "name": "t:names.video",
+          "settings": {
+            "source": "uploaded",
+            "video_autoplay": false,
+            "video_loop": true,
+            "alt": "",
+            "custom_width": 100,
+            "custom_width_mobile": 100,
+            "aspect_ratio": "auto",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_6e81407_XiGAc9"
+        "ai_gen_block_6e81407_XiGAc9",
+        "video_3CDaGW"
       ],
       "settings": {
         "content_direction": "column",
