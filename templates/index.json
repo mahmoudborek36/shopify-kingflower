@@ -107,19 +107,22 @@
           "type": "ai_gen_block_6e81407",
           "settings": {
             "collections": [
-              "frontpage",
               "test",
               "restt",
               "sasa",
               "zxzxz",
-              "zxzxzx"
+              "zxzxzx",
+              "i-love-you",
+              "i-am-sorry",
+              "get-well-soon",
+              "wedding"
             ],
             "desktop_width_percent": 100,
             "circle_size": 200,
             "border_width": 1,
             "border_color": "#ffc0cb",
             "item_width": 180,
-            "item_spacing": 10,
+            "item_spacing": 20,
             "title_size": 12,
             "title_color": "#000000",
             "title_spacing": 15
