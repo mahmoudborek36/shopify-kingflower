@@ -95,6 +95,14 @@
     "177282359903fb2d60": {
       "type": "_blocks",
       "blocks": {
+        "custom_liquid_t7EYb4": {
+          "type": "custom-liquid",
+          "name": "t:names.custom_liquid",
+          "settings": {
+            "custom_liquid": "<link href=\"https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@300;400;500&display=swap\" rel=\"stylesheet\">\n\n<style>\n  .rawaa-section-head {\n    width: 100%;\n    box-sizing: border-box;\n    text-align: center;\n    padding: 48px 24px 36px;\n    background: #ffffff;\n  }\n  .rawaa-eyebrow {\n    display: inline-flex;\n    align-items: center;\n    gap: 12px;\n    font-family: 'Montserrat', sans-serif;\n    font-size: 11px;\n    font-weight: 500;\n    letter-spacing: 0.22em;\n    text-transform: uppercase;\n    color: #c9748a;\n    margin-bottom: 18px;\n  }\n  .rawaa-eyebrow::before,\n  .rawaa-eyebrow::after {\n    content: '';\n    display: block;\n    width: 32px;\n    height: 0.5px;\n    background: #c9748a;\n  }\n  .rawaa-main-title {\n    font-family: 'Cormorant Garamond', serif;\n    font-size: clamp(34px, 8vw, 58px);\n    font-weight: 300;\n    font-style: italic;\n    color: #1a1a1a;\n    line-height: 1.1;\n    letter-spacing: -0.01em;\n    margin: 0 0 16px;\n  }\n  .rawaa-subtitle {\n    font-family: 'Montserrat', sans-serif;\n    font-size: clamp(11px, 2.5vw, 13px);\n    font-weight: 300;\n    letter-spacing: 0.1em;\n    color: #999999;\n    line-height: 1.9;\n    max-width: 400px;\n    margin: 0 auto 28px;\n  }\n  .rawaa-divider {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    gap: 10px;\n  }\n  .rawaa-divider-line {\n    width: 48px;\n    height: 0.5px;\n    background: #e8b4c0;\n  }\n  .rawaa-divider-diamond {\n    width: 5px;\n    height: 5px;\n    background: #c9748a;\n    transform: rotate(45deg);\n  }\n  @media (max-width: 480px) {\n    .rawaa-section-head { padding: 36px 20px 28px; }\n    .rawaa-eyebrow { font-size: 10px; letter-spacing: 0.14em; }\n    .rawaa-eyebrow::before,\n    .rawaa-eyebrow::after { width: 20px; }\n    .rawaa-subtitle { letter-spacing: 0.06em; }\n  }\n</style>\n\n<div class=\"rawaa-section-head\">\n  <div class=\"rawaa-eyebrow\">Shop by occasion</div>\n  <h2 class=\"rawaa-main-title\">Every moment<br>deserves beauty</h2>\n  <p class=\"rawaa-subtitle\">From declarations of love to quiet gestures of care — find the arrangement that speaks for you.</p>\n  <div class=\"rawaa-divider\">\n    <div class=\"rawaa-divider-line\"></div>\n    <div class=\"rawaa-divider-diamond\"></div>\n    <div class=\"rawaa-divider-line\"></div>\n  </div>\n</div>"
+          },
+          "blocks": {}
+        },
         "ai_gen_block_6e81407_XiGAc9": {
           "type": "ai_gen_block_6e81407",
           "settings": {
@@ -107,11 +115,11 @@
               "zxzxzx"
             ],
             "desktop_width_percent": 100,
-            "circle_size": 120,
+            "circle_size": 200,
             "border_width": 1,
             "border_color": "#ffc0cb",
-            "item_width": 100,
-            "item_spacing": 30,
+            "item_width": 180,
+            "item_spacing": 10,
             "title_size": 12,
             "title_color": "#000000",
             "title_spacing": 15
@@ -143,6 +151,7 @@
         }
       },
       "block_order": [
+        "custom_liquid_t7EYb4",
         "ai_gen_block_6e81407_XiGAc9",
         "video_3CDaGW"
       ],
