@@ -179,6 +179,7 @@
       "blocks": {
         "ai_gen_block_c35105a_x9pgmb": {
           "type": "ai_gen_block_c35105a",
+          "disabled": true,
           "settings": {
             "collection": "frontpage",
             "products_per_page": 4,
@@ -286,15 +287,198 @@
         "padding-block-end": 0
       }
     },
-    "custom_liquid_7w7rCk": {
-      "type": "custom-liquid",
-      "name": "t:names.custom_liquid",
+    "product_list_DnDD87": {
+      "type": "product-list",
+      "blocks": {
+        "static-header": {
+          "type": "_product-list-content",
+          "name": "t:names.header",
+          "static": true,
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": false,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "align_baseline": true,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 38,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product_list_text_UzcJBt": {
+              "type": "_product-list-text",
+              "name": "t:names.collection_title",
+              "settings": {
+                "text": "<h3>{{ closest.collection.title }}</h3>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "product_list_button_jjXpRp": {
+              "type": "_product-list-button",
+              "name": "t:names.product_list_button",
+              "settings": {
+                "label": "View all",
+                "open_in_new_tab": false,
+                "style_class": "link",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_list_text_UzcJBt",
+            "product_list_button_jjXpRp"
+          ]
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "name": "t:names.product_card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 4,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product_card_gallery_qbnDMB": {
+              "type": "_product-card-gallery",
+              "name": "t:names.product_card_media",
+              "settings": {
+                "image_ratio": "adapt",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 22,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "product_title_epJUza": {
+              "type": "product-title",
+              "name": "t:names.product_title",
+              "settings": {
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 4,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "price_TAwJbx": {
+              "type": "price",
+              "name": "t:names.product_price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_installments": false,
+                "show_tax_info": false,
+                "type_preset": "h6",
+                "width": "100%",
+                "alignment": "left",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "color": "var(--color-foreground)",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_card_gallery_qbnDMB",
+            "product_title_epJUza",
+            "price_TAwJbx"
+          ]
+        }
+      },
+      "name": "t:names.products_grid",
       "settings": {
-        "custom_liquid": "<style>\n.features{\n  display:flex;\n  justify-content:center;\n  gap:30px;\n  padding:40px 20px;\n  background:white;\n  flex-wrap:wrap;\n}\n\n.feature-card{\n  background:#F5F5F5;\n  border-radius:12px;\n  padding:25px 30px;\n  text-align:center;\n  width:220px;\n  transition:0.3s;\n  box-shadow:0 5px 15px rgba(0,0,0,0.05);\n}\n\n.feature-card:hover{\n  transform:translateY(-5px);\n  box-shadow:0 10px 25px rgba(0,0,0,0.1);\n}\n\n.icon{\n  width:55px;\n  height:55px;\n  border-radius:50%;\n  display:flex;\n  align-items:center;\n  justify-content:center;\n  margin:auto;\n  font-size:22px;\n  margin-bottom:12px;\n}\n\n.delivery{\n  background:#e9f6ec;\n}\n\n.flowers{\n  background:#fdecef;\n}\n\n.payment{\n  background:#fdf4e6;\n}\n\n.feature-card h3{\n  font-size:14px;\n  margin-bottom:5px;\n  letter-spacing:1px;\n}\n\n.feature-card p{\n  font-size:12px;\n  color:#777;\n}\n</style>\n\n\n\n\n<section class=\"features\">\n  <div class=\"feature-card\">\n    <div class=\"icon delivery\">\n      🚚\n    </div>\n    <h3>Same Day Delivery</h3>\n    <p>Fast delivery across the city</p>\n  </div>\n\n  <div class=\"feature-card\">\n    <div class=\"icon flowers\">\n      🌷\n    </div>\n    <h3>Fresh Flowers</h3>\n    <p>Daily fresh premium flowers</p>\n  </div>\n\n  <div class=\"feature-card\">\n    <div class=\"icon payment\">\n      🔒\n    </div>\n    <h3>Secure Payment</h3>\n    <p>100% safe checkout</p>\n  </div>\n</section>",
-        "color_scheme": "",
+        "collection": "frontpage",
+        "layout_type": "grid",
+        "carousel_on_mobile": false,
+        "max_products": 16,
+        "columns": 4,
+        "mobile_columns": "2",
+        "mobile_card_size": "60cqw",
+        "columns_gap": 8,
+        "rows_gap": 24,
+        "icons_style": "arrow",
+        "icons_shape": "none",
         "section_width": "page-width",
-        "padding-block-start": 0,
-        "padding-block-end": 0
+        "horizontal_alignment": "center",
+        "gap": 28,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 48,
+        "padding-block-end": 48
       }
     }
   },
@@ -302,6 +486,6 @@
     "hero_jVaWmY",
     "177282359903fb2d60",
     "1772870366c9abc4fe",
-    "custom_liquid_7w7rCk"
+    "product_list_DnDD87"
   ]
 }
