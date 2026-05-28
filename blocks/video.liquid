@@ -362,9 +362,9 @@
 
       {%- if s.whatsapp_number != blank -%}
         {%- assign wa_num = s.whatsapp_number | remove: '+' | remove: ' ' | remove: '-' -%}
-        {%- assign wa_msg = s.whatsapp_message | url_encode -%}
+       {%- assign wa_msg = s.whatsapp_message | url_encode -%}
         
-          href="https://wa.me/{{ wa_num }}{% if wa_msg != '' %}?text={{ wa_msg }}{% endif %}"
+        <a   href="https://wa.me/{{ wa_num }}{% if wa_msg != '' %}?text={{ wa_msg }}{% endif %}"
           class="vcr-wa"
           target="_blank"
           rel="noopener"
@@ -474,7 +474,7 @@
   "type": "richtext",
   "id": "guide_text",
   "label": "Body text",
-  "default": "<p>Beautiful room decoration with balloons, petals, candles, and special details for unforgettable moments.<\/p>"
+ "default": "<p>Beautiful room decoration with balloons, petals, candles, and special details for unforgettable moments.</p>"
 },
     {
       "type": "header",
