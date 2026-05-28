@@ -17,15 +17,14 @@
 .vcr-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  align-items: start;
+  gap: 48px;
+  align-items: center;
 }
 
-/* ── MOBILE: full width, stacked ── */
 @media (max-width: 749px) {
   .vcr-row {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 24px;
   }
 }
 
@@ -36,14 +35,12 @@
   overflow: hidden;
 }
 
-/* slides strip */
 .vcr-slides {
   display: flex;
   transition: transform 0.45s cubic-bezier(.4,0,.2,1);
   will-change: transform;
 }
 
-/* individual slide — tall portrait on desktop */
 .vcr-slide {
   flex: 0 0 100%;
   position: relative;
@@ -52,14 +49,9 @@
   overflow: hidden;
 }
 
-/* mobile: shorter so content + guide both fit on screen */
 @media (max-width: 749px) {
-  .vcr-slide {
-    aspect-ratio: 4 / 3;
-  }
-  .vcr-carousel-wrap {
-    border-radius: 10px;
-  }
+  .vcr-slide { aspect-ratio: 4 / 3; }
+  .vcr-carousel-wrap { border-radius: 10px; }
 }
 
 .vcr-slide img {
@@ -76,7 +68,7 @@
   display: block;
 }
 
-/* ─── Play button overlay ──────────────────── */
+/* ─── Play button ──────────────────────────── */
 .vcr-play-btn {
   position: absolute;
   inset: 0;
@@ -150,20 +142,90 @@
 .vcr-right {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 4px 0;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px 0;
+  text-align: left;
 }
 
-/* on mobile add a subtle top border to separate from carousel */
 @media (max-width: 749px) {
   .vcr-right {
+    align-items: center;
+    text-align: center;
     padding: 12px 0 0;
-    gap: 14px;
   }
 }
 
-.vcr-guide-heading { margin: 0 0 6px; }
-.vcr-guide-body    { margin: 0; line-height: 1.7; }
+/* ─── Eyebrow label ────────────────────────── */
+.vcr-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c9748a;
+}
+.vcr-eyebrow::before,
+.vcr-eyebrow::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 0.5px;
+  background: #c9748a;
+  flex-shrink: 0;
+}
+.vcr-eyebrow::before { display: none; }
+
+@media (max-width: 749px) {
+  .vcr-eyebrow::before { display: block; }
+}
+
+/* ─── Main heading ─────────────────────────── */
+.vcr-guide-heading {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: clamp(28px, 3.5vw, 52px);
+  font-weight: 300;
+  font-style: italic;
+  color: #1a1a1a;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* ─── Divider ──────────────────────────────── */
+.vcr-rule {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.vcr-rule-line {
+  width: 40px;
+  height: 0.5px;
+  background: #e8b4c0;
+}
+.vcr-rule-diamond {
+  width: 5px;
+  height: 5px;
+  background: #c9748a;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+/* ─── Body text ────────────────────────────── */
+.vcr-guide-body {
+  font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+  font-size: clamp(12px, 1.1vw, 14px);
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  line-height: 1.9;
+  color: #888;
+  margin: 0;
+  max-width: 380px;
+}
 
 /* ─── WhatsApp button ──────────────────────── */
 .vcr-wa {
@@ -173,15 +235,21 @@
   background: #25D366;
   color: #fff;
   text-decoration: none;
-  padding: 12px 22px;
+  padding: 14px 28px;
   border-radius: 999px;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  transition: background 0.2s;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  transition: background 0.2s, transform 0.2s;
   width: fit-content;
+  margin-top: 8px;
 }
-.vcr-wa:hover { background: #1cb85a; }
+.vcr-wa:hover {
+  background: #1cb85a;
+  transform: translateY(-1px);
+}
 
-/* on mobile stretch button full width for easy tapping */
 @media (max-width: 749px) {
   .vcr-wa {
     width: 100%;
@@ -191,6 +259,8 @@
 }
 
 {% endstylesheet %}
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <div
   class="vcr-block"
@@ -205,16 +275,14 @@
 >
   <div class="vcr-row">
 
-    {%- comment -%}── LEFT: mixed carousel ──{%- endcomment -%}
+    {%- comment -%}── LEFT: carousel ──{%- endcomment -%}
     <div class="vcr-carousel-wrap" id="car-{{ block.id }}">
       <div class="vcr-slides" id="slides-{{ block.id }}">
-
         {%- for n in (1..10) -%}
           {%- assign vk   = 'slide_video_' | append: n -%}
           {%- assign ik   = 'slide_image_' | append: n -%}
           {%- assign vobj = s[vk] -%}
           {%- assign iobj = s[ik] -%}
-
           {%- if vobj != blank -%}
             {%- assign picked_url = '' -%}
             {%- for src in vobj.sources -%}
@@ -229,19 +297,15 @@
             {%- if vobj.preview_image != blank -%}
               {%- assign poster_url = vobj.preview_image | image_url: width: 1200 -%}
             {%- endif -%}
-
             <div class="vcr-slide" data-type="video">
               <video
                 src="{{ picked_url }}"
                 {% if poster_url != '' %}poster="{{ poster_url }}"{% endif %}
-                autoplay
-                muted
-                playsinline
+                autoplay muted playsinline
                 {% if s.video_loop %}loop{% endif %}
                 preload="auto"
               ></video>
             </div>
-
           {%- elsif iobj != blank -%}
             <div class="vcr-slide" data-type="image">
               <img
@@ -253,7 +317,6 @@
             </div>
           {%- endif -%}
         {%- endfor -%}
-
       </div>
 
       <button class="vcr-btn-prev" id="prev-{{ block.id }}" aria-label="Previous">
@@ -274,31 +337,39 @@
       </div>
     </div>
 
-    {%- comment -%}── RIGHT: guide + WhatsApp ──{%- endcomment -%}
+    {%- comment -%}── RIGHT: luxury text ──{%- endcomment -%}
     <div class="vcr-right">
 
       {%- if s.guide_heading != blank or s.guide_text != blank -%}
-        <div class="vcr-guide">
-          {%- if s.guide_heading != blank -%}
-            <h3 class="vcr-guide-heading" style="font-size:{{ s.guide_heading_size }}px;">{{ s.guide_heading }}</h3>
-          {%- endif -%}
-          {%- if s.guide_text != blank -%}
-            <div class="vcr-guide-body" style="font-size:{{ s.guide_font_size }}px; color:{{ s.guide_color }};">{{ s.guide_text }}</div>
-          {%- endif -%}
+
+        <div class="vcr-eyebrow">{{ s.eyebrow_label | default: 'A moment worth remembering' }}</div>
+
+        {%- if s.guide_heading != blank -%}
+          <h3 class="vcr-guide-heading">{{ s.guide_heading }}</h3>
+        {%- endif -%}
+
+        <div class="vcr-rule">
+          <div class="vcr-rule-line"></div>
+          <div class="vcr-rule-diamond"></div>
+          <div class="vcr-rule-line"></div>
         </div>
+
+        {%- if s.guide_text != blank -%}
+          <div class="vcr-guide-body">{{ s.guide_text }}</div>
+        {%- endif -%}
+
       {%- endif -%}
 
       {%- if s.whatsapp_number != blank -%}
         {%- assign wa_num = s.whatsapp_number | remove: '+' | remove: ' ' | remove: '-' -%}
         {%- assign wa_msg = s.whatsapp_message | url_encode -%}
-        <a
+        
           href="https://wa.me/{{ wa_num }}{% if wa_msg != '' %}?text={{ wa_msg }}{% endif %}"
           class="vcr-wa"
           target="_blank"
           rel="noopener"
-          style="font-size:{{ s.wa_font_size }}px;"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32 32" fill="#fff">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="#fff">
             <path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.663 4.61 1.812 6.514L4 29l7.697-1.794A11.94 11.94 0 0016 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22a9.94 9.94 0 01-5.117-1.41l-.366-.217-3.786.881.936-3.674-.24-.38A9.956 9.956 0 016 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.406-7.508c-.295-.148-1.748-.862-2.02-.96-.27-.098-.467-.148-.663.148-.197.295-.762.96-.934 1.157-.172.196-.345.222-.64.074-.295-.148-1.246-.459-2.374-1.464-.877-.782-1.469-1.748-1.641-2.043-.172-.295-.018-.454.129-.601.133-.132.295-.345.443-.517.148-.173.197-.296.296-.493.098-.197.049-.37-.025-.517-.074-.148-.663-1.598-.908-2.19-.239-.576-.482-.497-.663-.507l-.566-.01c-.197 0-.517.074-.787.37-.27.295-1.033 1.01-1.033 2.463s1.058 2.857 1.206 3.054c.148.197 2.083 3.18 5.047 4.461.706.305 1.256.487 1.684.623.708.225 1.353.193 1.862.117.568-.085 1.748-.715 1.995-1.405.246-.69.246-1.28.172-1.405-.074-.123-.27-.197-.566-.345z"/>
           </svg>
           {{ s.whatsapp_label | default: 'Chat on WhatsApp' }}
@@ -316,29 +387,23 @@
   var next   = document.getElementById('next-{{ block.id }}');
   var dotsEl = document.getElementById('dots-{{ block.id }}');
   if (!slides) return;
-
   var dots  = dotsEl ? Array.from(dotsEl.querySelectorAll('.vcr-dot')) : [];
   var total = slides.children.length;
   var cur   = 0;
-
   function goTo(idx) {
     var curVid = slides.children[cur] && slides.children[cur].querySelector('video');
     if (curVid) curVid.pause();
     cur = (idx + total) % total;
     slides.style.transform = 'translateX(-' + (cur * 100) + '%)';
     dots.forEach(function (d, i) { d.classList.toggle('active', i === cur); });
-    /* autoplay the video in the new active slide */
     var newVid = slides.children[cur] && slides.children[cur].querySelector('video');
     if (newVid) { newVid.currentTime = 0; newVid.play().catch(function(){}); }
   }
-
   if (prev) prev.addEventListener('click', function () { goTo(cur - 1); });
   if (next) next.addEventListener('click', function () { goTo(cur + 1); });
   dots.forEach(function (d) {
     d.addEventListener('click', function () { goTo(parseInt(d.dataset.idx)); });
   });
-
-  /* swipe */
   var startX = null;
   slides.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
   slides.addEventListener('touchend', function (e) {
@@ -347,8 +412,6 @@
     if (Math.abs(diff) > 40) goTo(diff > 0 ? cur + 1 : cur - 1);
     startX = null;
   });
-
-  /* scroll reveal */
   var el = document.getElementById('vcr-{{ block.id }}');
   if (el) {
     new IntersectionObserver(function (entries) {
@@ -371,153 +434,48 @@
       "type": "paragraph",
       "content": "Add a Video OR Image per slot. Video takes priority if both are set."
     },
-    {
-      "type": "video",
-      "id": "slide_video_1",
-      "label": "Slide 1 — Video"
-    },
-    {
-      "type": "image_picker",
-      "id": "slide_image_1",
-      "label": "Slide 1 — Image (if no video)"
-    },
-    {
-      "type": "video",
-      "id": "slide_video_2",
-      "label": "Slide 2 — Video"
-    },
-    {
-      "type": "image_picker",
-      "id": "slide_image_2",
-      "label": "Slide 2 — Image (if no video)"
-    },
-    {
-      "type": "video",
-      "id": "slide_video_3",
-      "label": "Slide 3 — Video"
-    },
-    {
-      "type": "image_picker",
-      "id": "slide_image_3",
-      "label": "Slide 3 — Image (if no video)"
-    },
-    {
-      "type": "video",
-      "id": "slide_video_4",
-      "label": "Slide 4 — Video"
-    },
-    {
-      "type": "image_picker",
-      "id": "slide_image_4",
-      "label": "Slide 4 — Image (if no video)"
-    },
-    {
-      "type": "video",
-      "id": "slide_video_5",
-      "label": "Slide 5 — Video"
-    },
-    {
-      "type": "image_picker",
-      "id": "slide_image_5",
-      "label": "Slide 5 — Image (if no video)"
-    },
-    {
-      "type": "video",
-      "id": "slide_video_6",
-      "label": "Slide 6 — Video"
-    },
-    {
-      "type": "image_picker",
-      "id": "slide_image_6",
-      "label": "Slide 6 — Image (if no video)"
-    },
-    {
-      "type": "video",
-      "id": "slide_video_7",
-      "label": "Slide 7 — Video"
-    },
-    {
-      "type": "image_picker",
-      "id": "slide_image_7",
-      "label": "Slide 7 — Image (if no video)"
-    },
-    {
-      "type": "video",
-      "id": "slide_video_8",
-      "label": "Slide 8 — Video"
-    },
-    {
-      "type": "image_picker",
-      "id": "slide_image_8",
-      "label": "Slide 8 — Image (if no video)"
-    },
-    {
-      "type": "video",
-      "id": "slide_video_9",
-      "label": "Slide 9 — Video"
-    },
-    {
-      "type": "image_picker",
-      "id": "slide_image_9",
-      "label": "Slide 9 — Image (if no video)"
-    },
-    {
-      "type": "video",
-      "id": "slide_video_10",
-      "label": "Slide 10 — Video"
-    },
-    {
-      "type": "image_picker",
-      "id": "slide_image_10",
-      "label": "Slide 10 — Image (if no video)"
-    },
-    {
-      "type": "checkbox",
-      "id": "video_loop",
-      "label": "Loop videos",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "video_muted",
-      "label": "Mute videos",
-      "default": false
-    },
+    { "type": "video", "id": "slide_video_1", "label": "Slide 1 — Video" },
+    { "type": "image_picker", "id": "slide_image_1", "label": "Slide 1 — Image" },
+    { "type": "video", "id": "slide_video_2", "label": "Slide 2 — Video" },
+    { "type": "image_picker", "id": "slide_image_2", "label": "Slide 2 — Image" },
+    { "type": "video", "id": "slide_video_3", "label": "Slide 3 — Video" },
+    { "type": "image_picker", "id": "slide_image_3", "label": "Slide 3 — Image" },
+    { "type": "video", "id": "slide_video_4", "label": "Slide 4 — Video" },
+    { "type": "image_picker", "id": "slide_image_4", "label": "Slide 4 — Image" },
+    { "type": "video", "id": "slide_video_5", "label": "Slide 5 — Video" },
+    { "type": "image_picker", "id": "slide_image_5", "label": "Slide 5 — Image" },
+    { "type": "video", "id": "slide_video_6", "label": "Slide 6 — Video" },
+    { "type": "image_picker", "id": "slide_image_6", "label": "Slide 6 — Image" },
+    { "type": "video", "id": "slide_video_7", "label": "Slide 7 — Video" },
+    { "type": "image_picker", "id": "slide_image_7", "label": "Slide 7 — Image" },
+    { "type": "video", "id": "slide_video_8", "label": "Slide 8 — Video" },
+    { "type": "image_picker", "id": "slide_image_8", "label": "Slide 8 — Image" },
+    { "type": "video", "id": "slide_video_9", "label": "Slide 9 — Video" },
+    { "type": "image_picker", "id": "slide_image_9", "label": "Slide 9 — Image" },
+    { "type": "video", "id": "slide_video_10", "label": "Slide 10 — Video" },
+    { "type": "image_picker", "id": "slide_image_10", "label": "Slide 10 — Image" },
+    { "type": "checkbox", "id": "video_loop", "label": "Loop videos", "default": true },
     {
       "type": "header",
-      "content": "Text guide"
+      "content": "Text content"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow_label",
+      "label": "Eyebrow label",
+      "default": "A moment worth remembering"
     },
     {
       "type": "text",
       "id": "guide_heading",
-      "label": "Heading",
-      "default": "How it works"
+      "label": "Main heading",
+      "default": "Prepare a Surprise They'll Never Forget"
     },
     {
       "type": "richtext",
       "id": "guide_text",
-      "label": "Guide text",
-      "default": "<p>Follow these steps to get started. Contact us on WhatsApp if you need any help.</p>"
-    },
-    {
-      "type": "range",
-      "id": "guide_heading_size",
-      "label": "Heading size",
-      "min": 14, "max": 48, "step": 1, "unit": "px",
-      "default": 22
-    },
-    {
-      "type": "range",
-      "id": "guide_font_size",
-      "label": "Body text size",
-      "min": 12, "max": 24, "step": 1, "unit": "px",
-      "default": 15
-    },
-    {
-      "type": "color",
-      "id": "guide_color",
-      "label": "Text color",
-      "default": "#333333"
+      "label": "Body text",
+      "default": "<p>Beautiful room decoration with balloons, petals, candles, and special details for unforgettable moments.</p>"
     },
     {
       "type": "header",
@@ -542,44 +500,13 @@
       "default": "Chat on WhatsApp"
     },
     {
-      "type": "range",
-      "id": "wa_font_size",
-      "label": "Button font size",
-      "min": 12, "max": 22, "step": 1, "unit": "px",
-      "default": 15
-    },
-    {
       "type": "header",
-      "content": "t:content.padding"
+      "content": "Spacing"
     },
-    {
-      "type": "range",
-      "id": "padding-block-start",
-      "label": "t:settings.top",
-      "min": 0, "max": 64, "step": 2, "unit": "px",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "padding-block-end",
-      "label": "t:settings.bottom",
-      "min": 0, "max": 64, "step": 2, "unit": "px",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "padding-inline-start",
-      "label": "t:settings.left",
-      "min": 0, "max": 64, "step": 2, "unit": "px",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "padding-inline-end",
-      "label": "t:settings.right",
-      "min": 0, "max": 64, "step": 2, "unit": "px",
-      "default": 0
-    }
+    { "type": "range", "id": "padding-block-start", "label": "Top padding", "min": 0, "max": 64, "step": 2, "unit": "px", "default": 0 },
+    { "type": "range", "id": "padding-block-end", "label": "Bottom padding", "min": 0, "max": 64, "step": 2, "unit": "px", "default": 0 },
+    { "type": "range", "id": "padding-inline-start", "label": "Left padding", "min": 0, "max": 64, "step": 2, "unit": "px", "default": 0 },
+    { "type": "range", "id": "padding-inline-end", "label": "Right padding", "min": 0, "max": 64, "step": 2, "unit": "px", "default": 0 }
   ],
   "presets": [
     {

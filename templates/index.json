@@ -99,7 +99,7 @@
           "type": "custom-liquid",
           "name": "t:names.custom_liquid",
           "settings": {
-            "custom_liquid": "<link href=\"https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@300;400;500&display=swap\" rel=\"stylesheet\">\n\n<style>\n  .rawaa-section-head {\n    width: 100%;\n    box-sizing: border-box;\n    text-align: center;\n    padding: 48px 24px 36px;\n    background: #ffffff;\n  }\n  .rawaa-eyebrow {\n    display: inline-flex;\n    align-items: center;\n    gap: 12px;\n    font-family: 'Montserrat', sans-serif;\n    font-size: 11px;\n    font-weight: 500;\n    letter-spacing: 0.22em;\n    text-transform: uppercase;\n    color: #c9748a;\n    margin-bottom: 18px;\n  }\n  .rawaa-eyebrow::before,\n  .rawaa-eyebrow::after {\n    content: '';\n    display: block;\n    width: 32px;\n    height: 0.5px;\n    background: #c9748a;\n  }\n  .rawaa-main-title {\n    font-family: 'Cormorant Garamond', serif;\n    font-size: clamp(34px, 8vw, 58px);\n    font-weight: 300;\n    font-style: italic;\n    color: #1a1a1a;\n    line-height: 1.1;\n    letter-spacing: -0.01em;\n    margin: 0 0 16px;\n  }\n  .rawaa-subtitle {\n    font-family: 'Montserrat', sans-serif;\n    font-size: clamp(11px, 2.5vw, 13px);\n    font-weight: 300;\n    letter-spacing: 0.1em;\n    color: #999999;\n    line-height: 1.9;\n    max-width: 400px;\n    margin: 0 auto 28px;\n  }\n  .rawaa-divider {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    gap: 10px;\n  }\n  .rawaa-divider-line {\n    width: 48px;\n    height: 0.5px;\n    background: #e8b4c0;\n  }\n  .rawaa-divider-diamond {\n    width: 5px;\n    height: 5px;\n    background: #c9748a;\n    transform: rotate(45deg);\n  }\n  @media (max-width: 480px) {\n    .rawaa-section-head { padding: 36px 20px 28px; }\n    .rawaa-eyebrow { font-size: 10px; letter-spacing: 0.14em; }\n    .rawaa-eyebrow::before,\n    .rawaa-eyebrow::after { width: 20px; }\n    .rawaa-subtitle { letter-spacing: 0.06em; }\n  }\n</style>\n\n<div class=\"rawaa-section-head\">\n  <div class=\"rawaa-eyebrow\">Shop by occasion</div>\n  <h2 class=\"rawaa-main-title\">Every moment<br>deserves beauty</h2>\n  <p class=\"rawaa-subtitle\">From declarations of love to quiet gestures of care — find the arrangement that speaks for you.</p>\n  <div class=\"rawaa-divider\">\n    <div class=\"rawaa-divider-line\"></div>\n    <div class=\"rawaa-divider-diamond\"></div>\n    <div class=\"rawaa-divider-line\"></div>\n  </div>\n</div>"
+            "custom_liquid": "<link href=\"https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@300;400;500&display=swap\" rel=\"stylesheet\">\n\n<style>\n  .r-wrap {\n    display: block;\n    width: 100%;\n    text-align: center;\n    padding: 48px 0 36px;\n    box-sizing: border-box;\n    background: #fff;\n  }\n  .r-eyebrow {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 12px;\n    font-family: 'Montserrat', sans-serif;\n    font-size: 11px;\n    font-weight: 500;\n    letter-spacing: 0.22em;\n    text-transform: uppercase;\n    color: #c9748a;\n    margin-bottom: 20px;\n  }\n  .r-eyebrow::before,\n  .r-eyebrow::after {\n    content: '';\n    display: block;\n    width: 28px;\n    height: 0.5px;\n    background: #c9748a;\n    flex-shrink: 0;\n  }\n  .r-title {\n    font-family: 'Cormorant Garamond', serif;\n    font-size: clamp(32px, 4.5vw, 58px);\n    font-weight: 300;\n    font-style: italic;\n    color: #1a1a1a;\n    line-height: 1.15;\n    margin: 0 auto 16px;\n    text-align: center;\n    display: block;\n  }\n  .r-sub {\n    font-family: 'Montserrat', sans-serif;\n    font-size: clamp(11px, 1.1vw, 13px);\n    font-weight: 300;\n    letter-spacing: 0.08em;\n    color: #999;\n    line-height: 1.9;\n    margin: 0 auto 28px;\n    text-align: center;\n    display: block;\n    max-width: 400px;\n    padding: 0 16px;\n    box-sizing: border-box;\n  }\n  .r-divider {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    gap: 10px;\n  }\n  .r-line {\n    width: 40px;\n    height: 0.5px;\n    background: #e8b4c0;\n    display: block;\n    flex-shrink: 0;\n  }\n  .r-diamond {\n    width: 5px;\n    height: 5px;\n    background: #c9748a;\n    transform: rotate(45deg);\n    display: block;\n    flex-shrink: 0;\n  }\n</style>\n\n<div class=\"r-wrap\">\n  <div class=\"r-eyebrow\">Shop by occasion</div>\n  <span class=\"r-title\">Every moment<br>deserves beauty</span>\n  <span class=\"r-sub\">From declarations of love to quiet gestures of care — find the arrangement that speaks for you.</span>\n  <div class=\"r-divider\">\n    <span class=\"r-line\"></span>\n    <span class=\"r-diamond\"></span>\n    <span class=\"r-line\"></span>\n  </div>\n</div>"
           },
           "blocks": {}
         },
@@ -136,16 +136,11 @@
           "settings": {
             "slide_video_1": "shopify://files/videos/Video Project.mp4",
             "video_loop": true,
-            "video_muted": true,
             "guide_heading": "Prepare a Surprise They'll Never Forget",
             "guide_text": "<p>Beautiful room decoration with balloons, petals, candles, and special details for unforgettable moments.</p>",
-            "guide_heading_size": 22,
-            "guide_font_size": 15,
-            "guide_color": "#333333",
             "whatsapp_number": "201005464703",
             "whatsapp_message": "Hello! I need help.",
             "whatsapp_label": "Chat on WhatsApp",
-            "wa_font_size": 14,
             "padding-block-start": 48,
             "padding-block-end": 48,
             "padding-inline-start": 0,
@@ -165,7 +160,7 @@
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
         "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
+        "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
         "gap": 12,
         "section_width": "page-width",
